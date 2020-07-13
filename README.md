@@ -34,6 +34,7 @@ array([1.5539440e-09, 8.2805976e-12, 4.7423885e-07, 4.3320365e-06,
 
 4f. ![](sc7.8.png)
 
+
 ## 7/9 Daily Response
 
 1. TF hub is a hub of datasets in the cloud that we are using and accessing. We bring it down to our local computers, and then use it’s data of movie reviews for our own modeling purposes.
