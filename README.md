@@ -19,14 +19,21 @@ Machine Learning Responses:
 3. The loss function finds the amount of error and works to minimize it. The optimizer then looks at the results from the loss function, and attempts to make another estimate with less error. The loss function will then analyze it, and the cycle continues. The loss function is categorical because the items which are being analyzed are also categorical. You cannot really measure them continuously.
 
 4a. Whatistheshapeoftheimagestrainingset:​(60,000,28,28)
+
 4b. Whatisthelengthofthelabelstrainingset?​6000
+
 4c. What is the shape of the images test set? (1000,28,28)
+
 4d. Estimate a probability model and apply it to the test set in order to
 produce the array of probabilities that a randomly selected image is
 each of the possible numeric outcomes:
 array([1.5539440e-09, 8.2805976e-12, 4.7423885e-07, 4.3320365e-06,
 1.9139490e-12, 2.6702085e-10, 1.1747801e-14, 9.9999344e-01, 1.0673884e-06, 7.2961376e-07], dtype=float32)
+
 4e. Use np.argmax() with your predictions object to return the numeral with the highest probability from the test labels dataset: 7
-f. ![]
+
+4f. ![](Screen Shot 2020-07-13 at 3.40.33 PM.png)
+
+
 
 
