@@ -32,7 +32,7 @@ array([1.5539440e-09, 8.2805976e-12, 4.7423885e-07, 4.3320365e-06,
 
 4e. Use np.argmax() with your predictions object to return the numeral with the highest probability from the test labels dataset: 7
 
-4f. ![](Screen Shot 2020-07-13 at 3.40.33 PM.png)
+4f. ![](sc7.8.png)
 
 
 
