@@ -63,17 +63,17 @@ A.
 filter = [ [0, 1, 0], [1, -4, 1], [0, 1, 0]]
 weight  = 1
 The first filter did not emphasize any specific kind of line as the 2nd and 3rd ones did. This image turned out much darker than the others, as if all features were not emphasized, but decreased. 
-![](1.1)
+![](1.1.png)
 
 filter = [ [-1, -2, -1], [0, 0, 0], [1, 2, 1]]
 weight  = 1
 This filter emphasizes horizontal lines in the image. Just by looking at it, you can tell as the wood supporting the railing is well defined -- much more than in the other images. In addition, in the line ‘filter’ you can see that one bracket contains only 0’s. This indicates that the filter will highlight horizontal features.
-![](1.2)
+![](1.2.png)
 
 filter = [ [-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]
 weight  = 1
 This filter emphasizes vertical lines in the image. Just by looking at it, you can tell since the structure of the level above where the people are climbing is more defined. In addition, in the line ‘filter’ you can see that each bracket contains 0 as it’s middle number. This indicates that the filter will highlight vertical features. 
-![](1.3)
+![](1.3.png)
 
 When you apply a filter to the original array, you are multiplying it with a cluster of pixels (in this case 9 pixels). The multiplication values are then added to each other. Next, the same process happens to the next cluster of pixels. Computer vision is improved by convolutions since convolutions detect features and match them to labels. They highlight certain features of an image, which helps when trying to decipher one thing from another as well as analysis.
 
