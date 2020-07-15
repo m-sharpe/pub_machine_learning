@@ -97,7 +97,7 @@ Regression
 
 Overfit and underfit
 1. When comparing the tiny, small, medium and large models, we can clearly see which performs best on testing data without overfitting or underfitting much. We can tell by the similarity of the solid and dotted lines. The closer and more similar they are, the better the model performed. In this case, it is tiny. It also helps demonstrate at which epochs things begin to go amiss, as most of the time validation lines curve upwards drastically. 
-![](overfit and underfit.png)
+![](overfitandunderfit.png)
 
 
 
