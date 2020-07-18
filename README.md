@@ -111,6 +111,8 @@ Overfit and underfit
 
 For my tee-shirt design, I chose to combine the images of a lightbulb and a rubix cube. I wanted the object of my image to be a lightbulb since it reminds me of all the bright students and ideas that have emerged this summer. I chose a rubix cube as my style image mostly so I could add color to my image. I wanted something that could be nicely integrated into the shirt too, which I think if the shirt is black, this image would be. I can picture my image on the front of a shirt, and then on the back, "Jump Start Data Science Summer Program". 
 
+![](lightbulbrc.png)
+
 
 
 
