@@ -127,9 +127,10 @@ Every day, judges decide the amount of risk a person is to society. Based on the
 3. The metric= argument, [‘acc’] tells us how often predictions equal labels. It compares the testing and training data and outputs its accuracy. 
 
 4. Based on the Training/Validation Accuracy graph (first one) and the Training/Validation Loss graph (second one), we can see that the model performs better when being asked for accuracy than loss. The Validation Accuracy line (blue on the first graph) performed much closer to the Training Accuracy line (red on first graph) and though it was not as smooth and veers away slightly at the end, it appears to be much more on track than the Validation Loss line (blue on second graph). Overall, I think both performed fine, however. 
-![](7.20acc$loss)
+![](7.20acc$loss.png)
 
-5. The model correctly predicted every image as a cat or dog. However, looking back, the images I chose all had definite characteristics of one animal. For example, all the dogs I chose had long ears. If the model did not perform as well, I would consider adding more convolution layers, or perhaps changing my hyperparameters and therefore how the model analyzes images. 
+5. The model correctly predicted every image as a cat or dog. However, looking back, the images I chose all had definite characteristics of one animal. For example, all the dogs I chose had long ears. If the model did not perform as well, I would consider adding more convolution layers, or perhaps changing my hyperparameters and therefore how the model analyzes images.
+
 ![](dog1.jpeg)
 ![](dog2.jpeg)
 ![](dog3.jpg)
