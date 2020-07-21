@@ -113,6 +113,26 @@ For my tee-shirt design, I chose to combine the images of a lightbulb and a rubi
 
 ![](lightbulbrc.png)
 
+## 7/20 Daily Response
+
+Problem Statement: 
+Every day, judges decide the amount of risk a person is to society. Based on the past of a person they have never met, they must decide if that person is safe to return to society or not. Should they post bail? Are they trusted to show up to their next court date and can therefore not be held? Or are they too dangerous to be given the opportunity to return to the outside world? This is a large burden to carry, and while some cases may have an obvious answer, many do not. The safety of society is a universal issue, of which there are many solutions depending on culture and government, however in the US, it is plausible that Machine Learning can help make these difficult, risk management decisions. Of course, every person and every situation is different, and computers will not always take into account or understand complex cases, however, by understanding training data, and analyzing more cases from the past than a human brain can recall, Machine Learning is a plausible tool for assessing the risk of letting a person return to society. 
+
+
+
+1. I used the optimizer RMSprop(lr=0.001). Unlike RMSprop, Rprop looks at the size of each gradient and compares the size of a single gradient to the size of the gradient next to it. It works to find the right step size. The right step size is found when the two gradients it compares have the same sign. After finding this, the step size is limited and the weight update is applied. However, Rprop works well with full batched, but not small ones. RMSprop, on the other hand works for mini batches since it divides by the root of squared gradient using the moving average. Adagrad is another optimizer that remembers the sum of squared gradients from another dimension and the scales gradients based on that. 
+
+2. The loss function used is binary_crossentropy. This function is effective when there are two classifications. Binary_crossentrophy takes the log probability of a point being either one or the other for it’s predictions. In order to penalize bad decisions, the computer takes the negative log of the probability of the true class; so the better the prediction, the lower the loss. The mean of all the combined losses is found which gives us the binary_crossentropy output. 
+
+3. The metric= argument, [‘acc’] tells us how often predictions equal labels. It compares the testing and training data and outputs its accuracy. 
+
+4. Based on the Training/Validation Accuracy graph (first one) and the Training/Validation Loss graph (second one), we can see that the model performs better when being asked for accuracy than loss. The Validation Accuracy line (blue on the first graph) performed much closer to the Training Accuracy line (red on first graph) and though it was not as smooth and veers away slightly at the end, it appears to be much more on track than the Validation Loss line (blue on second graph). Overall, I think both performed fine, however. 
+
+5. The model correctly predicted every image as a cat or dog. If the model did not perform as well, I would consider adding more convolution layers, or perhaps changing my hyperparameters and therefore how the model analyzes images. 
+
+
+
+
 
 
 
