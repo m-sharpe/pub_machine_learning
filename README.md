@@ -142,17 +142,24 @@ Premade estimators:
 1. The labels data set explained the 3 species, ‘setosa’, ‘versicolor’, and ‘virginica’. We separated it from the features in the data set by using the line train.pop(‘Species’) and test.pop(‘Species’) accordingly. 
 
 2. 5 estimators:
+
   a. tf.estimator.BaselineEstimator: This estimator focuses on label values and will ignore feature values
+  
   b. tf.estimator.BoostedTreesEstimator: an estimator used for boosted trees models
+  
   c. tf.estimator.DNNEstimator: used in deep neural networks. Must have user
+  
   d. tf.estimator.LinearEstimator: used to estimate linear models
+  
   e. tf.estimator.DNNLinearCombinedEstimator: used when DNN and linear models are joined
+  
   
 3. The purpose of input functions and defining feature columns (besides the fact that an input is always needed) is to adapt the inputs to fit the estimator. It transforms the raw input data to be usable and legible by the model.
 
 4.The command classifier.train() estimates the training model based on the classifier which was defined earlier in the code. We defined ‘classifier’ using a DNNClassifier() which is meant for a deep neural network with multiple possible classifiers. We added input_fn = lambda. Lambda means that while no arguments were given as an input, arguments are given as an output. In addition, after 5000 steps, the model will stop training.
 
 5. Ranked in terms of their performance: 
+
   a. When using tf.estimator.LinearClassifier: 
   
       Prediction is "Setosa" (99.1%), expected "Setosa"
