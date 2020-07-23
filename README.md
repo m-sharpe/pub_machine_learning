@@ -154,22 +154,34 @@ Premade estimators:
 
 5. Ranked in terms of their performance: 
   a. When using tf.estimator.LinearClassifier: 
+  
       Prediction is "Setosa" (99.1%), expected "Setosa"
+      
       Prediction is "Versicolor" (97.2%), expected "Versicolor"
+      
       Prediction is "Virginica" (95.8%), expected "Virginica"
+  
   b. When using tf.estimator.DNNLinearCombinedClassifier: 
+  
       Prediction is "Setosa" (84.7%), expected "Setosa"
+      
       Prediction is "Versicolor" (51.0%), expected "Versicolor"
+      
       Prediction is "Virginica" (65.8%), expected "Virginica"
+  
   c. When using tf.estimator.DNNClassifier: 
+      
       Prediction is "Setosa" (81.7%), expected "Setosa"
+      
       Prediction is "Versicolor" (49.8%), expected "Versicolor"
+      
       Prediction is "Virginica" (62.0%), expected "Virginica"
       
 
 Linear model:
 
 1. The histogram is very similar to the top left graph on the pairplot. The shape and area of the two plots are very similar. Both are graphing the age of those on the Titanic. From the plots, you can see that the most popular age was in the high 20s. 
+
 ![](Screen Shot 2020-07-21 at 1.45.58 PM.png)
 ![](Screen Shot 2020-07-21 at 1.47.33 PM.png)
 
@@ -199,6 +211,24 @@ Boosted Trees:
 ![](7.22logreg.png)
 
 The predicted probabilities histogram using boosted trees seemed to have more definite positions, as is extremely low in the middle of the x-axis and peaks a bit more at 0 and 1. The ROC plot shows that the distributions are distinct. Because the line shoots up, and then over, the rate of true positives is very high while the rate of false positives is not. Once the number of false positives begins to increase however, the rate of true positives is already high. The area under the ROC curve takes up most of the graph, and so we know that the model is a good predictor. The AUC was 0.8766 which can be improved, but also is by no means a bad number to get. 
+
+1[](7.22roc.png)
+
+
+
+Boosted trees with model understanding:
+
+1. For the horizontal bar plot, the red bars (and their length) demonstrates the length that characteristic does not help your survival rate. In this plot, being male is the characteristic plot which most lessened this person’s chance of survival. His fare and number of siblings/spouses were the only things that increased his chance of survival, but their contributions were very small. The violin plot demonstrates the same thing, just in a different format. It also brings in his placement on the scale of death or survival in comparison to others on the ship. For example, gender. The light blue (eval set contributions distributions) has 2 large (let's call them) blobs. That is because there are two genders. The blob which this man is a part of, has a lower chance of survival than the other blob, which is women. Since women and children had a higher rate of survival, this plot is accurately showing his placement according to others. 
+
+![](horizbar.png)
+![](violin.png)
+
+
+2. Both graphs below demonstrate that the most important factor was gender. They then disagreed about the order of the next few, however both included fare and class. Generally aspects which measured status. From this, we can conclude that gender and class (and perhaps age) were the most contributing factors to one’s survival on the Titanic. 
+
+![](gainfeatureimportances.png)
+![](permfeatureimportances.png)
+
 
 
 
