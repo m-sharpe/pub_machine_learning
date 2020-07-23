@@ -136,6 +136,80 @@ Every day, judges decide the amount of risk a person is to society. Based on the
 ![](cat2.jpeg)
 ![](cat3.jpeg)
 
+## 7/21 Daily Response
+
+Premade estimators:
+1. The labels data set explained the 3 species, ‘setosa’, ‘versicolor’, and ‘virginica’. We separated it from the features in the data set by using the line train.pop(‘Species’) and test.pop(‘Species’) accordingly. 
+
+2. 5 estimators:
+  a. tf.estimator.BaselineEstimator: This estimator focuses on label values and will ignore feature values
+  b. tf.estimator.BoostedTreesEstimator: an estimator used for boosted trees models
+  c. tf.estimator.DNNEstimator: used in deep neural networks. Must have user
+  d. tf.estimator.LinearEstimator: used to estimate linear models
+  e. tf.estimator.DNNLinearCombinedEstimator: used when DNN and linear models are joined
+  
+3. The purpose of input functions and defining feature columns (besides the fact that an input is always needed) is to adapt the inputs to fit the estimator. It transforms the raw input data to be usable and legible by the model.
+
+4.The command classifier.train() estimates the training model based on the classifier which was defined earlier in the code. We defined ‘classifier’ using a DNNClassifier() which is meant for a deep neural network with multiple possible classifiers. We added input_fn = lambda. Lambda means that while no arguments were given as an input, arguments are given as an output. In addition, after 5000 steps, the model will stop training.
+
+5. Ranked in terms of their performance: 
+  a. When using tf.estimator.LinearClassifier: 
+      Prediction is "Setosa" (99.1%), expected "Setosa"
+      Prediction is "Versicolor" (97.2%), expected "Versicolor"
+      Prediction is "Virginica" (95.8%), expected "Virginica"
+  b. When using tf.estimator.DNNLinearCombinedClassifier: 
+      Prediction is "Setosa" (84.7%), expected "Setosa"
+      Prediction is "Versicolor" (51.0%), expected "Versicolor"
+      Prediction is "Virginica" (65.8%), expected "Virginica"
+  c. When using tf.estimator.DNNClassifier: 
+      Prediction is "Setosa" (81.7%), expected "Setosa"
+      Prediction is "Versicolor" (49.8%), expected "Versicolor"
+      Prediction is "Virginica" (62.0%), expected "Virginica"
+      
+
+Linear model:
+
+1. The histogram is very similar to the top left graph on the pairplot. The shape and area of the two plots are very similar. Both are graphing the age of those on the Titanic. From the plots, you can see that the most popular age was in the high 20s. 
+![](Screen Shot 2020-07-21 at 1.45.58 PM.png)
+![](Screen Shot 2020-07-21 at 1.47.33 PM.png)
+
+2. In this dataset, categorical columns are defined as features except ‘fare’ and ‘age’. Densefeature will take one of the categorical columns and inspect it. From it, an array is printed describing results for that column.
+
+3. The feature columns are the input to LinearClassifier() and were also defined earlier in the code. It is all of the categorical columns. It includes the name of each category (column) and also the options each cell in the column could be. For example, for ‘gender’ it could be ‘male’ or ‘female’. Seeing as my accuracy was 0.75, I’d say the model did fine, but can probably do better. The purpose of adding a cross feature column is to gain a better perspective of each passenger and their likelihood of survival. For example, age and gender. This makes a difference because the chance of survival of a 67 year old woman is probably less than a 19 year old woman. Therefore it is important to consider multiple categories/features at once. The performance improved very slightly when making use of Derived Feature Columns. It increased to 0.7538. The ROC plot shows that the distributions are distinct. Because the line shoots up, and then over, the rate of true positives is very high while the rate of false positives is not. Once the number of false positives begins to increase however, the rate of true positives is already high. The area under the ROC curve takes up most of the graph, and so we know that the model is a good predictor. The Predicted Probabilities plot show the frequency of probabilities of survival. The most dense part of the graph is below 0.4, demonstrating the high fatality rate. It gets lower in the middle, and then the frequency rises when the x-axis gets close to 1 again. 
+
+![](7.21roc.png)
+![](7.21predprob.png)
+
+
+
+## 7/22 Daily Response
+
+Open discussion:
+Data science is much more open and interdisciplinary than computational statistics. Data scientists deal with a larger variety of data in many more forms and therefore use more techniques and pull from more disciplines in order to analyze the data. Computer Science differs from Data Science in that its focus is the building and efficiency of computers, not data. Data Science is more than a combination of Computer Science and Computational Statistics. It pulls from other realms such as business, as in order to extract data and gain the best view of it, you must understand other disciplines and the manner in which that discipline wants the data to be presented. Therefore, it is not just the difference between a scientist and an engineer. 
+
+
+Boosted Trees:
+1. A one-hot-encoded column dissects data from each categorical column, turning values into a 0 or 1 depending on options within the categorical column. For instance, if looking at ‘class’ and the feature value ‘third’, if a person was in 3rd class, they would show up as 1, if not, 0. A separate column would be for second class, and another from first (as these are all the options within the categorical column. Since the 1 and 0 basically represent yes or no, it is discrete. 
+
+2. A dense feature specifies the absence of data by putting a 0 there. It would also put a 0 if the data cannot be expressed numerically. After performing the two lines of code, the data frame is then expressed as an array, having considered the dense feature specifications. It shows all of the transformations. This could be useful to get an idea of what the data looks like before doing a lot of work to it. 
+
+3. My histograms of the probabilities of survival using logistic regression and boosted trees demonstrate that most people did not have a large chance of survival. However, the histogram using logistic regression was less clear. It’s maximum is lower, and it’s range is smaller. 
+
+![](7.22tree.png)
+![](7.22logreg.png)
+
+The predicted probabilities histogram using boosted trees seemed to have more definite positions, as is extremely low in the middle of the x-axis and peaks a bit more at 0 and 1. The ROC plot shows that the distributions are distinct. Because the line shoots up, and then over, the rate of true positives is very high while the rate of false positives is not. Once the number of false positives begins to increase however, the rate of true positives is already high. The area under the ROC curve takes up most of the graph, and so we know that the model is a good predictor. The AUC was 0.8766 which can be improved, but also is by no means a bad number to get. 
+
+
+
+
+
+
+
+	
+
+
+
 
 
 
