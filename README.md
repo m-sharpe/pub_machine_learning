@@ -189,8 +189,8 @@ Linear model:
 
 1. The histogram is very similar to the top left graph on the pairplot. The shape and area of the two plots are very similar. Both are graphing the age of those on the Titanic. From the plots, you can see that the most popular age was in the high 20s. 
 
-![](Screen Shot 2020-07-21 at 1.45.58 PM.png)
-![](Screen Shot 2020-07-21 at 1.47.33 PM.png)
+![](pairplot.png)
+![](age.png)
 
 2. In this dataset, categorical columns are defined as features except ‘fare’ and ‘age’. Densefeature will take one of the categorical columns and inspect it. From it, an array is printed describing results for that column.
 
