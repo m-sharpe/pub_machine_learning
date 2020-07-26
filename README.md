@@ -244,7 +244,7 @@ For my project, I used the first 5,000 images for my train_imgs and train_labs, 
 	The following graphs show all of my training data’s outputs. First is a graph showing the evolution of the loss and mse (which were the same) as the model trained using 5 epochs, the second graph shows only my mae. The graphs emphasize what I said above, about the first few epochs showing much more improvement than the last two. You can clearly see that the computer is learning with every epoch, but that it definitely does level off. 
 
 
-!![](proj3loss:mse.png)
+!![](proj3lossmse.png)
 
 !![](proj3mae.png)
 
