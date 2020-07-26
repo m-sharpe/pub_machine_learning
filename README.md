@@ -237,6 +237,15 @@ Boosted trees with model understanding:
 ![](gainfeatureimportances.png)
 ![](permfeatureimportances.png)
 
+##Project 3
+
+For my project, I used the first 5,000 images for my train_imgs and train_labs, and the last 1,000 for my test_imgs and test_labs. My computer was able to download and organize all 10,000 images, but when it came to handling them in Python, using all 9,000 images as my training data was too much. After importing and structuring the data, I divided both train_imgs and test_imgs by 255.0 in order to normalize them. Next, I wrote my DNN, using a Flatten layer, and 3 Dense layers. My first 2 Dense layers are identical, I used 64 units, and I used ‘relu’, which sets all numbers less than 0 to 0, basically making all numbers positive. For my last Dense layer, I put 1 unit, since I need one output. For my model.compile I used RMSprop(lr=0.001) as my optimizer, binary_crossentropy and my loss, and then for my metrics, I used mse and mae. I then fit the model using my training images and labels. I tested 1 epoch, with 100 steps_per_epoch, and a batch_size of 50. For my results I got a loss of 290, a mse of 599 and a mae of 19 (all rounded). 
+	After I finished with my DNN, I created a CNN. For this, I also only used ‘relu’, and did 3 convolutions with MaxPooling. I used 16, then 32, 64 for my convolutions and for my MaxPooling, used groups of (2,2). I then used Flatten again, one Dense layer with 64 units and an activation of relu, and lastly, another Dense layer with 1 unit (the output). For my model.compile, I used the same variables as my DNN, except I used the loss function mse instead of binary_crossentropy. For my model.fit, I chose to use 5 epochs, 50 steps_per_epoch, and a batch_size of 100. I chose this because smaller numbers in general seemed to work better. I originally used a batch_size of 25 and few steps_per_epoch, but got better results when I increased them slightly. I was also able to do this in tandem with increasing the number of train_imgs and train_labs. My first epoch had an mae of 38, and my model finished with an mae of 20 (both numbers rounded down). The 4th and 5th epochs had very similar results, which tells me that 5 epochs was a good choice. The final mse was 655, as was my final loss. Next, I evaluated the test_imgs and test_labs. I got a mae of 62.28, and a loss/mse of 4886. 
+	The following graphs show all of my training data’s outputs. First is a graph showing the evolution of the loss and mse (which were the same) as the model trained using 5 epochs, the second graph shows only my mae. The graphs emphasize what I said above, about the first few epochs showing much more improvement than the last two. You can clearly see that the computer is learning with every epoch, but that it definitely does level off. 
+
+!![](proj3loss/mse.png)
+!![](proj3mae.png)
+
 
 
 
