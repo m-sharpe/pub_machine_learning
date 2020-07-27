@@ -255,3 +255,21 @@ The following graphs show all of my training data’s outputs. First is a graph 
 - 3-Year Recidivism for Offenders Released from Prison in Iowa: input = felony severity, output = if arrested again or not
 
 - COMPAS analysis: input = compas score of recidivism, output = if reentered or not
+
+
+## 7/27 Project 3 cont. 
+The first image I chose had a predicted population of 34.366 people. Considering the fact that this image looks to have no houses, I think the population count is vastly overestimating. To give it some credit, there does seem to be a road or river on the right side, both of which would indicate a higher population, but a lack of man made structures is a more clear indication that there are no inhabitants. 
+
+!![](1.49.06.png)
+
+The second image I chose has an estimated population of 8.891. While I also think this to be a slight exaggeration, it is an improvement from the first image and it's prediction. This image clearly has what looks to be a river, which again, points to there being some populance, however not much since there doesnt seem to be a structure. But also there is a path leading from the right side of the image towards the center, showing human intervention. Either way, the lower number value of about 9, is a much closer estimation for an image without buildings. 
+
+!![](1.52.02.png)
+
+The last image I chose has an estimated population of 50.004. I also consider this to be an overestimation, since it looks like there are only 2 rural homes in the image, and neither one is fully shown. I believe this number should be close to 10. However if you were to compare this image to the past two, the labels are correct in assuming this image has a higher population in relation to the past two. 
+
+!![](1.53.58.png)
+
+To get these images, I used my CNN from project three, but decreased my number of training and testing images/labels to 100. 
+
+
