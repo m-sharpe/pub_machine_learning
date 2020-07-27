@@ -258,13 +258,13 @@ The following graphs show all of my training data’s outputs. First is a graph 
 
 
 ## 7/27 Project 3 cont. 
-The first image I chose had a predicted population of 34.366 people. Considering the fact that this image looks to have no houses, I think the population count is vastly overestimating. To give it some credit, there does seem to be a road or river on the right side, both of which would indicate a higher population, but a lack of man made structures is a more clear indication that there are no inhabitants. 
+The first image I chose has a population of 34.366 people, according to the population labels given by the csv files. My model predicted there to be 17.85 people. Considering the fact that this image looks to have no houses, I can understand why the model would give such a low number compared to the true value. There does seem to be a road or river on the right side, both of which would indicate a higher population, but a lack of man made structures is a more clear indication that there are no inhabitants. 
 ![](1.49.06.png)
 
-The second image I chose has an estimated population of 8.891. While I also think this to be a slight exaggeration, it is an improvement from the first image and it's prediction. This image clearly has what looks to be a river, which again, points to there being some populance, however not much since there doesnt seem to be a structure. But also there is a path leading from the right side of the image towards the center, showing human intervention. Either way, the lower number value of about 9, is a much closer estimation for an image without buildings. 
+The second image I chose has a population of 8.891, as reported by my variable train_labs. My model predicted that the population was 17.57. In this case, without any population information, I would have chosen a number closer to the true value, and not the predicted value from my model. Perhaps the computer thought there was a road or river on the left side, and there does seem to be a path stretching from the right side of the image towards the center. Either way, the model more than doubled the true value, demonstrating poor accuracy.
 ![](1.52.02.png)
 
-The last image I chose has an estimated population of 50.004. I also consider this to be an overestimation, since it looks like there are only 2 rural homes in the image, and neither one is fully shown. I believe this number should be close to 10. However if you were to compare this image to the past two, the labels are correct in assuming this image has a higher population in relation to the past two. 
+The last image I chose has a true value of 50.004. This number makes sense relative to the other images, since this image has two structures in it, hence people. However, the model estimated there to be only 18.62 people. This number is much smaller than the true value, so its accuracy is not good, however, seeing has there are only two structures, neither of which are fully in the image, and both of which seem to reside in a rather rural area, I can understand why the model predicted a smaller number.
 ![](1.53.58.png)
 
 To get these images, I used my CNN from project three, but decreased my number of training and testing images/labels to 100. 
