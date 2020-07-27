@@ -247,3 +247,11 @@ The following graphs show all of my training data’s outputs. First is a graph 
 
 !![](proj3lossmse.png)
 !![](proj3mae.png)
+
+
+## Data Source Ideas
+- Rossi Criminal Recidivism Data: input = if employed after 1 year of getting out of jail, output = if arrested again or not
+
+- 3-Year Recidivism for Offenders Released from Prison in Iowa: input = felony severity, output = if arrested again or not
+
+- COMPAS analysis: input = compas score of recidivism, output = if reentered or not
