@@ -114,7 +114,7 @@ For my tee-shirt design, I chose to combine the images of a lightbulb and a rubi
 ## 7/20 Daily Response
 
 Problem Statement: 
-Every day, decisions are made about a persons risk to society. Whether their first time in prison, or their eighth, based on a persons behavior and past, predictions can be made about a persons probability of hurting society if being let out of prison and ending up back in the prison system. Environment, genetics, past crimes, crime severity, are just a few factor which could influence a persons potential risk. It is plausible that Machine Learning can help make decisions about how much of a risk someone is based off of their own case and past cases. Of course, every person and every situation is different, and computers will not always take into account or understand complex cases, however, by understanding training data, and analyzing more cases from the past than a human brain can recall, Machine Learning is a plausible tool for assessing the risk of letting a person return to society. By looking at recidivism rates in relation to a persons characteristics (not symply physical), computers can help humans figure out which variables are the best predictors for recidivism, helping keep society safe. 
+Every day, decisions are made about a persons risk to society. Whether their first time in prison, or their eighth, based on a persons behavior and past, predictions can be made about a their probability of hurting society if being let out of prison, or of their reentry into the prison system. Environment, genetics, past crimes, crime severity, are just a few factor which could influence a persons potential risk. It is plausible that Machine Learning can help make decisions about how much of a risk someone is based off of their own case details, and its similarity to past cases. Of course, every person and every situation is different, and computers will not always take into account or understand complex cases, however, by understanding training data, and analyzing more cases from the past than a human brain can recall, Machine Learning is a plausible tool for assessing the risk of letting a person return to society. By looking at recidivism rates in relation to a persons characteristics (not symply physical), computers can help humans figure out which variables are the best predictors for recidivism, helping keep society safe. 
 
 
 
@@ -268,5 +268,21 @@ The last image I chose has a true value of 50.004. This number makes sense relat
 ![](1.53.58.png)
 
 To get these images, I used my CNN from project three, but decreased my number of training and testing images/labels to 100. 
+
+
+## 7/28 Daily Responses
+
+Word Embeddings
+
+A. One-hot encoding is inefficient when vectorizing a corpus of words...
+
+B. The following plot shows the training and validation accuracy from the Word Embeddings tensorflow excersiae. This plot shows that the training accuracy is very very good, while the validation accuracy is not as good, and unsteady. This demonstrates overfitting, as the training data is basically perfect, but the validation data is not as accurate and moves around quite a bit. 
+
+This next plot shows the training and validation loss from the same excersize. It's results are similar to that of the above graph. There is almost no loss for the training data, and it remains like this the entire time. The validation data, however, is even more unsteady than in the accuracy graph. It's range is larger and it's hard to see improvement as its loss moves around so much and no general trend can be seen. 
+
+
+Class Classification with an RNN
+
+A. 
 
 
