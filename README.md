@@ -277,9 +277,10 @@ Word Embeddings
 A. One-hot encoding is inefficient when vectorizing a corpus of words...
 
 B. The following plot shows the training and validation accuracy from the Word Embeddings tensorflow excersiae. This plot shows that the training accuracy is very very good, while the validation accuracy is not as good, and unsteady. This demonstrates overfitting, as the training data is basically perfect, but the validation data is not as accurate and moves around quite a bit. 
+![](WORDEMBEDDINGS(ACC).png)
 
 This next plot shows the training and validation loss from the same excersize. It's results are similar to that of the above graph. There is almost no loss for the training data, and it remains like this the entire time. The validation data, however, is even more unsteady than in the accuracy graph. It's range is larger and it's hard to see improvement as its loss moves around so much and no general trend can be seen. 
-
+![](wordembeddings(loss).png)
 
 Class Classification with an RNN
 
