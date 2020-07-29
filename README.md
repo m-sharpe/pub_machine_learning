@@ -284,6 +284,19 @@ This next plot shows the training and validation loss from the same excersize. I
 
 Class Classification with an RNN
 
-A. 
+A. The plot below describes the training and validation accuracy from the tensor flow excersize Text Classifiction with an RNN. This graph shows the train accuracy steadily increasing as the epochs progress. The validation accuracy does the same, however not at the same rate. Both have high accuracies, but by the last epoch, the the training accuracy is much higher than the validation accuracy -- a sign of overfitting. 
 
+![](notstackedrnnacc.png)
+
+The next plot shows the loss for the same data. This plot has the training loss decreasing at a rapid pace, and the validation loss increasing slightly, even though they both begin around the same point (loss wise). This pattern points to overfitting, as the model does a great job with the training data, but horribly with the validation loss, as the validation loss does exactly what it is not supposed to. 
+
+![](notstackedrnnloss.png)
+
+The next two plot are also from the tensor flow excersize Text Classification with an RNN, except the data they're based off of has stacked LSTM layers. The first of the two plots the accuracy of the data. This graph shows similar data, but the accuracy does not increase as much as the previous accuracy graph, though it is overall has a higher accuracy. The validation accuracy improves more than in the other graph, and is also generally more accurate. There is still overfitting occuring, however not as much. 
+
+![](stackedrnnacc.png)
+
+The last plot shows the loss, and is also an improvement from the first loss graph. The overall loss, for both training and validation data is lower or equal to that of the other plot. In addition, the validation loss stays the same, instead of increasing which is a better result. Again, there is overfitting, since the training loss is so low and the validation loss isnt, however I would consider the unchanging validation loss to be a good sign in relation to the first loss graph. 
+
+![](stackrnnloss.png)
 
