@@ -274,12 +274,14 @@ To get these images, I used my CNN from project three, but decreased my number o
 
 Word Embeddings
 
-A. One-hot encoding is inefficient when vectorizing a corpus of words...
+A. One-hot encoding is inefficient when vectorizing a corpus of words since it does not take into account meanings of a word. This method is one-dimentional, and signifies the presence of a word vs the absense of a word on a grid - 0 if the word is not present, and 1 if it is. This means that while it is good at tracking vocabulary, the vectors can get quite long and again, no meaning is demonstrated. Four Dimensional Embedding is better since it does track a words meaning. Each word is a 4D vector, and by tracking the distances from one vector to another, relations and meanings between words is found. 
 
 B. The following plot shows the training and validation accuracy from the Word Embeddings tensorflow excersiae. This plot shows that the training accuracy is very very good, while the validation accuracy is not as good, and unsteady. This demonstrates overfitting, as the training data is basically perfect, but the validation data is not as accurate and moves around quite a bit. 
+
 ![](WORDEMBEDDINGS(ACC).png)
 
 This next plot shows the training and validation loss from the same excersize. It's results are similar to that of the above graph. There is almost no loss for the training data, and it remains like this the entire time. The validation data, however, is even more unsteady than in the accuracy graph. It's range is larger and it's hard to see improvement as its loss moves around so much and no general trend can be seen. 
+
 ![](wordembeddings(loss).png)
 
 Class Classification with an RNN
