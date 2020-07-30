@@ -347,6 +347,9 @@ These results are much more varied than those above. They are also deemed less s
 
 
 
+
+
+
 Text Generation with RNN
 
 The RNN model is able to learn and remember text first by vectorizing the text. Two tables are made, one which converts text to integers, and the other which converts integers to text. Next, the text is divided into sequences. This helps the model predict the next probable character, which when done correctly, forms text. Training batches are then made, and the model is trained. Embedding layers are used to help the model form vectors and understand the relations between words. A prediction loop is also utilized as the model moves from one character to another. The first text excerpt did a good job learning text, especially considering the fact that the model learned the language with no previous knowledge -- it’s not as if it is mode to learn English vs other languages. The main issues are some misspelled words, and grammatical mistakes, all of which I am willing to forgive. This is especially astounding as it only took 10 epochs for a computer to learn what a child learns in about 3 years. 
@@ -416,6 +419,9 @@ This second excerpt did not do as well. In general it has the same error as the 
  For your bastards, call'd your broachman:
  'Tis very like manys of no that 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 Neural Machine translation with attention
 
