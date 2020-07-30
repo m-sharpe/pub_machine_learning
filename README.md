@@ -302,3 +302,132 @@ The last plot shows the loss, and is also an improvement from the first loss gra
 
 ![](stackrnnloss.png)
 
+
+## 7/29 Daily Response
+
+Sarcasm Classifier
+
+For my first source, I used CNN headlines. The results are below:
+
+“Train derailment described as 'a scene from hell'"
+2.6049333e-05
+
+"Four tech titans face grilling over their dominance"
+1.7773178e-05
+
+"Kavanaugh wanted Supreme Court to punt on abortion and Trump subpoenas"
+9.6208360e-03
+
+"Russia says it will approve world's first Covid-19 vaccine despite not completing trials"
+9.9941611e-01
+
+"A landmark study shows what makes a successful relationship"
+9.9996960e-01
+ 
+The model has interpreted two of the headlines to be sarcastic, and three not sarcastic. The first three headlines have a predictor closer to 0, indicating that they are not sarcastic, the last two however, are closer to the number 1, signifying they are sarcastic. I actually agree with the model and its measurements of sarcasm. In the last headline, the word ‘landmark’ is slightly off putting, and in the penultimate headline, the last part of the headline, ‘despite not completing trials’ is probably why the model viewed it as more sarcastic. 
+
+The second source I used was Fox news. The results are below:
+
+"top tech ceos face grilling as lawmakers warn 'they have too much power'"
+2.8736770e-06
+
+"fed agents who clashed with protesters in portland will exit downtown, gov says"
+4.1355593e-11
+
+"mcconnell suggests Dems are trying to 'sabotage' the next coronavirus bill"
+7.1629935e-10
+
+"third un staffer put on leave over video of alleged sex act in official car"
+8.8729189e-07
+
+"germany emerges as key target for russia, china interference, report warns"
+9.1230392e-01
+
+These results are much more varied than those above. They are also deemed less sarcastic than CNN headlines, as their numbers are generally closer to 0. Only the last headline is viewed as sarcastic. Based on these results, there is barely any sarcasm in the headlines, which just by looking at them, seems accurate. To be fair, I did try to pick unsarcastic headlines, to see just how objective Fox could be. These headlines are to the point and seem to not exaggerate. 
+
+
+
+Text Generation with RNN
+
+The RNN model is able to learn and remember text first by vectorizing the text. Two tables are made, one which converts text to integers, and the other which converts integers to text. Next, the text is divided into sequences. This helps the model predict the next probable character, which when done correctly, forms text. Training batches are then made, and the model is trained. Embedding layers are used to help the model form vectors and understand the relations between words. A prediction loop is also utilized as the model moves from one character to another. The first text excerpt did a good job learning text, especially considering the fact that the model learned the language with no previous knowledge -- it’s not as if it is mode to learn English vs other languages. The main issues are some misspelled words, and grammatical mistakes, all of which I am willing to forgive. This is especially astounding as it only took 10 epochs for a computer to learn what a child learns in about 3 years. 
+
+ ROMEO: or encounter, is not by my part,
+ Divide here they came from him seeming asitousand the mastere.
+ QUEEN MARGARET:
+ Why, 'tis sweet:--'twict joy with a tradeful king:
+ That all, so justly thou wilt say my friends!'
+ OXFORD:
+ O my good lord.
+ AEdile: I press'd my mother, my assurance, a point the earth
+ When you that doar to my brother's life.
+ Lord:
+ My lord.
+ LEONTES:
+ Stands to thee, good my lord;
+ Here is the bawds not come;
+ And then she may lords that same us the sleeves, no.
+ TYRBEL:
+ How to lie their edging,
+ You know the king? hast not I reice on the king!
+ I'll rain a little of danger rasple head,
+ And let it: and that answer to thy consent:
+ Like complantions hide to desire,
+ Unon his king and ears, and slaughted boldly ever
+ achous by every daughter and hang'd,
+ My heart is foreignsly in this clamour
+ Will I say to my power to wink,
+ Though I shall driby to a gentleman.
+ And you'll ansolect of yourself.
+ I'll go to-morrow will when they takened of this knack;
+ You, Signior Larte's goods, Master Fr
+
+This second excerpt did not do as well. In general it has the same error as the first one, just more of them, however, I still consider it to be impressive. 
+
+ ROMEO: wor you wonder his nurse,
+ Pref sag, yet inclinate the name of morim, call thee ring.
+ Hang it on us my house.
+ YORK:
+ I should I in a worthy of your march,
+ I will see you
+ To y a ring: but the feast an our wondrows,
+ Spes her throegh our opaning friends.
+ FRIAR LAURENCE:
+ Now madam,
+ A horse!
+ KING HENRY VI:
+ Uptrustion am I till thou two cause
+ To save fige, in thy substimory lisse, which wearous children stone,
+ Whereto fiery and wild be rumed by my husband?
+ Our seeling spate, that kill'd me,
+ And
+ cl's not of your confirm posts;
+ And, as it was done, that thy queen,
+ Design
+ To make him spoke of them my heart: away fire
+ The commn of voucese king, pardon.
+ HASTINGS:
+ O my sees see day, sir, I thought these priests.
+ First Lord:
+ honour, citizens: her fornibatience arragence,
+ My have sent humble with sighs,
+ To ste muster Boanspance of this:
+ If that I would to commix the visite
+ Dosh the preeting will I pay thee I have e fought,
+ For your bastards, call'd your broachman:
+ 'Tis very like manys of no that 
+
+
+Neural Machine translation with attention
+
+In general, the translations did just fine. The general message got across, but when it came to specifics, there were a few mistranslations, or incorrect grammar. An increase in epochs, probably would have helped, but in general, I am satisfied with the performance of the model. 
+
+![](sonrisa.png)
+
+![](conmigo.png)
+
+![](persona.png)
+
+
+
+
+
