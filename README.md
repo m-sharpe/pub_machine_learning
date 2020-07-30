@@ -309,38 +309,38 @@ Sarcasm Classifier
 
 For my first source, I used CNN headlines. The results are below:
 
- “Train derailment described as 'a scene from hell'"
+1. “Train derailment described as 'a scene from hell'"
 2.6049333e-05
 
- "Four tech titans face grilling over their dominance"
+2. "Four tech titans face grilling over their dominance"
 1.7773178e-05
 
- "Kavanaugh wanted Supreme Court to punt on abortion and Trump subpoenas"
+3. "Kavanaugh wanted Supreme Court to punt on abortion and Trump subpoenas"
 9.6208360e-03
 
- "Russia says it will approve world's first Covid-19 vaccine despite not completing trials"
+4. "Russia says it will approve world's first Covid-19 vaccine despite not completing trials"
 9.9941611e-01
 
- "A landmark study shows what makes a successful relationship"
+5. "A landmark study shows what makes a successful relationship"
 9.9996960e-01
  
 The model has interpreted two of the headlines to be sarcastic, and three not sarcastic. The first three headlines have a predictor closer to 0, indicating that they are not sarcastic, the last two however, are closer to the number 1, signifying they are sarcastic. I actually agree with the model and its measurements of sarcasm. In the last headline, the word ‘landmark’ is slightly off putting, and in the penultimate headline, the last part of the headline, ‘despite not completing trials’ is probably why the model viewed it as more sarcastic. 
 
 The second source I used was Fox news. The results are below:
 
- "top tech ceos face grilling as lawmakers warn 'they have too much power'"
+1. "top tech ceos face grilling as lawmakers warn 'they have too much power'"
 2.8736770e-06
 
- "fed agents who clashed with protesters in portland will exit downtown, gov says"
+2. "fed agents who clashed with protesters in portland will exit downtown, gov says"
 4.1355593e-11
 
- "mcconnell suggests Dems are trying to 'sabotage' the next coronavirus bill"
+3. "mcconnell suggests Dems are trying to 'sabotage' the next coronavirus bill"
 7.1629935e-10
 
- "third un staffer put on leave over video of alleged sex act in official car"
+4. "third un staffer put on leave over video of alleged sex act in official car"
 8.8729189e-07
 
- "germany emerges as key target for russia, china interference, report warns"
+5. "germany emerges as key target for russia, china interference, report warns"
 9.1230392e-01
 
 These results are much more varied than those above. They are also deemed less sarcastic than CNN headlines, as their numbers are generally closer to 0. Only the last headline is viewed as sarcastic. Based on these results, there is barely any sarcasm in the headlines, which just by looking at them, seems accurate. To be fair, I did try to pick unsarcastic headlines, to see just how objective Fox could be. These headlines are to the point and seem to not exaggerate. 
