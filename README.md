@@ -441,9 +441,9 @@ In order to create my own model, I decided to use a data set from a 1980 study b
 
 ![](agee.png)
 
-![](previous convictions.png)
+![](prev_conv.png)
 
-![](amount of education.png)
+![](amt_Edu.png)
 
 
 I used a Boosted Trees model to try and predict recidivism and what factors are most affluent in risk of recidivism. After creating training and testing input functions, I trained the model using the parameters shown below. 
@@ -460,6 +460,8 @@ I also decided to think globally, and made a chart describing the importance of 
 ![](mean_contribution.png)
 
 My results, written in the table below, at first seemed very good, however quickly become suspiciously good. It doesn't make sense that ones behavior can be predicted with 97% accuracy, especially when only 9 features are actually used. There is probably some underfitting since the dataset was pretty small. A similar dataset (COMPAS) with the same goal (predict recidivism), used 137 variables to predict recidivism with an accuracy of 65%. Though this accuracy is low, and pretty much the same as any human can do, it reflects the difficulties of analyzing human beings. Therefore I think the accuracy of COMPAS is about as good as it can get, and while it is not amazing, we should not expect anything much higher.
+
+![](finalresults.png)
 
 If allowed more time and resources, I think it would be good to find a dataset with more usable features. I think including things which incorporate genetics, living environment, location (neighborhood, air quality, prominence of guns, amount of green space...), and things about ones chilhood would all be good and helpful to gain an overall picture of people. I also think it would be good to use more individual participants, and to see what patterns exist. Although behaviors vary greatly from person to person, I think it would be useful to find patterns within behaviors and if patterns exist between specific features. 
 
