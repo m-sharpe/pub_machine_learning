@@ -409,8 +409,6 @@ This second excerpt did not do as well. In general it has the same error as the 
  To make him spoke of them my heart: away fire
  The commn of voucese king, pardon.
  HASTINGS:
- O my sees see day, sir, I thought these priests.
- First Lord:
  honour, citizens: her fornibatience arragence,
  My have sent humble with sighs,
  To ste muster Boanspance of this:
@@ -432,6 +430,52 @@ In general, the translations did just fine. The general message got across, but 
 ![](conmigo.png)
 
 ![](persona.png)
+
+##Final Project - Predicting Recidivism Rates with a Boosted Trees Model
+
+Every day, decisions are made about a person’s risk to society. Courts must predict the probability that others will recommit a crime (recidivate), as well as the severity of that crime based on a complex combination of a person’s past, environment, and genetics, among other things. Analyzing and predicting behavior is a very difficult task because it incorporates so many features and the importance of individual features varies between each person. However, because the consequences of such a decision could be dire (hearm/death of inocent people, or putting someone in jail who is actually not a danger to society), correct predictions of one’s future behavior is vital. Therefore, predicting recidivism rates/likelihood is an important task that should not be taken lightly. It is plausible that Machine Learning can help make decisions about an individual’s potential risk of recidivism based off of their own case details, and its similarity to other cases. This leads us to the question: Which factors are the best predictors for recidivism? And can machines do a good job in predicting recidivism rates in general?
+
+In order to create my own model, I decided to use a data set from a 1980 study by Rossi et al., "Money, Work, and Crime: Some Experimental Results", which followed up with convicts one year after their release. The dataset contains 432 rows (individuals), and I decreased the number of features to 10 (originally 62) in order to specify my focus. Originally, the data set contained one column for every week of the year, if the individual was hired that week, the observation would be 'yes', if not, 'no'. I decided not to incorporate all of that into my experiment since how employment specifically effects recidivism rates was not my focus. Information about each feature, as well as some graphs describing the data within specific features is below:
+
+![](data_explination.png)
+
+![](agee.png)
+
+![](previous convictions.png)
+
+![](amount of education.png)
+
+
+I used a Boosted Trees model to try and predict recidivism and what factors are most affluent in risk of recidivism. After creating training and testing input functions, I trained the model using the parameters shown below. 
+
+![](traintest.png)
+
+I then used the BoostedTreesClassifier() (since we are classifying recidivism as yes recidivized or no no recidivized) to train the model (using the training input function), and lastly evaluated it. After that, I created different charts interpreting local information. In other words, evaluating and predicting risk for individuals (directional feature contributions (DFC)). The graph below demonstrates the features of individual 432 on the dataset, and how each of them contributed to that individual being recidivized or not. On this graph, it views being recidivised as 
+"good", so the green and positive are features which one would point towards the individual recommiting a crime, and the red and negative are features which bode well for the individual. This individual was not arrested in the one year that he was tracked, which the features definitely would have pointed towards had it been unknown. 
+
+![](individual.png)
+
+I also decided to think globally, and made a chart describing the importance of each feature. I makes sense that "week" is the biggest contributor, which makes sense, since that feature basically tells if someone was arrested or not (if they made it to 52 or not). I still thought it interesting to see if someone did not make it all 52 weeks, how long it took them to get arrested. I am surprised that age is second. I would have assumed that previous convictions and education would have be further up, and that age would matter much much less. 
+
+![](mean_contribution.png)
+
+My results, written in the table below, at first seemed very good, however quickly become suspiciously good. It doesn't make sense that ones behavior can be predicted with 97% accuracy, especially when only 9 features are actually used. There is probably some underfitting since the dataset was pretty small. A similar dataset (COMPAS) with the same goal (predict recidivism), used 137 variables to predict recidivism with an accuracy of 65%. Though this accuracy is low, and pretty much the same as any human can do, it reflects the difficulties of analyzing human beings. Therefore I think the accuracy of COMPAS is about as good as it can get, and while it is not amazing, we should not expect anything much higher.
+
+If allowed more time and resources, I think it would be good to find a dataset with more usable features. I think including things which incorporate genetics, living environment, location (neighborhood, air quality, prominence of guns, amount of green space...), and things about ones chilhood would all be good and helpful to gain an overall picture of people. I also think it would be good to use more individual participants, and to see what patterns exist. Although behaviors vary greatly from person to person, I think it would be useful to find patterns within behaviors and if patterns exist between specific features. 
+
+This method could also be helpful in schools. Though a huge violation of privacy, especially for children, it could predict if a child will commit a crime. The results should not be shared with the child or their families as that could create expectations and alter the childs behavior making other predictions harder, but if used correctly and combined with the correct social services and support, the model could help prevent kids from going down the wrong path, and decrease the number of first offenders. After creating a model with a good accuracy (by "good" I mean 65% since anything much more is suspiciously goof and should not happen in the first place), I would look into how it could be slightly altered to predict first time offenders and the amount of danger they pose to society. 
+
+Below is a link to my poster:
+https://docs.google.com/presentation/d/1FYMMPSTh0IvVv_sSwosii4bu1L8X96wfqi4MVtsh9fI/edit?usp=sharing
+
+
+
+
+
+
+
+
+
 
 
 
